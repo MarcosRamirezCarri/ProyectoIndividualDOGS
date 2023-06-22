@@ -1,0 +1,59 @@
+.pagination_component {
+    justify-content: center;
+   display: flex;
+    margin: 27px 0 0px;
+    background-image: url(https://img.freepik.com/premium-vector/seamless-pattern-animals-paws-bones-vector-illustration-white-background_315739-159.jpg?w=2000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+  }
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 11px;
+  }
+.pagination_item {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(99, 58, 30);
+    height: 50px;
+    width: 50px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+.page:hover {
+    background-color: rgb(234, 180, 109);
+    color: white;
+  }
+.page.active {
+    background-color: rgb(234, 180, 109);
+    color: white;
+  }
+  .containerImg{
+    margin-left: 590px;
+    margin-top: 25px;
+    justify-content: space-between;
+    display: flex;
+    width: 60px;
+  }
+
+  
+  .image{
+    width: 40px;
+    height: 40px;
+  }
+  
