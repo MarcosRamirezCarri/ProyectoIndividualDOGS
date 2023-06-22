@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ProyectoIndividualDOGS/static/css/main.8d3efa62.chunk.css",
+    "main.js": "/ProyectoIndividualDOGS/static/js/main.6bf03452.chunk.js",
+    "main.js.map": "/ProyectoIndividualDOGS/static/js/main.6bf03452.chunk.js.map",
+    "runtime-main.js": "/ProyectoIndividualDOGS/static/js/runtime-main.ebd6ee94.js",
+    "runtime-main.js.map": "/ProyectoIndividualDOGS/static/js/runtime-main.ebd6ee94.js.map",
+    "static/js/2.0cdbc08d.chunk.js": "/ProyectoIndividualDOGS/static/js/2.0cdbc08d.chunk.js",
+    "static/js/2.0cdbc08d.chunk.js.map": "/ProyectoIndividualDOGS/static/js/2.0cdbc08d.chunk.js.map",
+    "static/js/3.c122e139.chunk.js": "/ProyectoIndividualDOGS/static/js/3.c122e139.chunk.js",
+    "static/js/3.c122e139.chunk.js.map": "/ProyectoIndividualDOGS/static/js/3.c122e139.chunk.js.map",
+    "index.html": "/ProyectoIndividualDOGS/index.html",
+    "static/css/main.8d3efa62.chunk.css.map": "/ProyectoIndividualDOGS/static/css/main.8d3efa62.chunk.css.map",
+    "static/js/2.0cdbc08d.chunk.js.LICENSE.txt": "/ProyectoIndividualDOGS/static/js/2.0cdbc08d.chunk.js.LICENSE.txt",
+    "static/media/Pata.c1fd5b16.jpeg": "/ProyectoIndividualDOGS/static/media/Pata.c1fd5b16.jpeg",
+    "static/media/dog.00f5c0f7.jpeg": "/ProyectoIndividualDOGS/static/media/dog.00f5c0f7.jpeg",
+    "static/media/gitHub.bc45ee99.jpeg": "/ProyectoIndividualDOGS/static/media/gitHub.bc45ee99.jpeg",
+    "static/media/linkedin.032cf8a6.jpeg": "/ProyectoIndividualDOGS/static/media/linkedin.032cf8a6.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ebd6ee94.js",
+    "static/js/2.0cdbc08d.chunk.js",
+    "static/css/main.8d3efa62.chunk.css",
+    "static/js/main.6bf03452.chunk.js"
+  ]
+}
