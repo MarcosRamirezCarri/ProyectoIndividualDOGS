@@ -14,7 +14,8 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 dogs: action.payload,
-                dogsHome: action.payload
+                dogsHome: action.payload,
+                allDogsFilter: action.payload
             };
         case GET_DETAILS:
             return {
@@ -31,22 +32,24 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 dogs: [...state.dogs, action.payload]
             };
-        case FILTER_TEMPERAMENT:
-            let allDogs = state.dogsHome;
-            console.log(allDogs)
-            let filterTemperaments = action.payload === 'all' ? allDogs : allDogs.filter(el => el.temperament.includes(action.payload));     
-            return {
-                ...state,
-                dogs: filterTemperaments
-            };
+      
         case FILTER_CREATED:
-            let allDogsFilter = state.dogsHome;
-            let filterCreated = action.payload === 'creados' ?  allDogsFilter.filter(d => d.creadoEnDB) : allDogsFilter.filter(d => !d.creadoEnDB);
+            let allDogsFilter = state.allDogsFilter;
+            let filterCreated = action.payload === 'creados' ?  allDogsFilter.filter(d => d.creadoEnDB) : state.dogsHome;
             console.log(filterCreated)
             return {
                 ...state,
-                dogs: filterCreated
+                dogs: filterCreated,
             }
+            case FILTER_TEMPERAMENT:
+              let allDogs = state.allDogsFilter;
+              console.log(allDogs)
+              let filterTemperaments = action.payload === 'all' ? allDogs : allDogs.filter(el => el.temperament.includes(action.payload));     
+              return {
+                  ...state,
+                  dogs: filterTemperaments,
+                
+              };
         case ORDER_BY_NAME:
       const orderDogsName = action.payload === 'name_asc' ?
         state.dogs.slice().sort(function(a, b) {

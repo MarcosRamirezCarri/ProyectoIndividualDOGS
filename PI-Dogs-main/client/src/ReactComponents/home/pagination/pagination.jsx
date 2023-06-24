@@ -50,7 +50,7 @@ function Pagination(props) {
             return null
           }
         })}
-        <button className="page" onClick={handleNext}>Next</button>
+       <button className="page" onClick={handleNext}>Next</button>
       </ul>
       <div className='containerImg'>
       <a href='https://github.com/MarcosRamirezCarri'> <img className='image' src={gitHub} alt=' ' /></a>

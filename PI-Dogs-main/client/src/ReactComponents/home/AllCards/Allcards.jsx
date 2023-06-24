@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './card/Card'
-import './allCards.css'
+import style from './allCards.module.css'
 import {getDogs} from '../../../Redux/actions';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,10 +23,9 @@ import Pagination from '../pagination/pagination';
 
     return (
     <div>
-      <div className='containerCards'>
-         {dogs.length === 0 ? <div className='LoaderCont'>
-        <h1 className='Loader' >🐶</h1>
-        <h1>Loading...</h1>
+      <div className={style.containerCards}>
+         {dogs.length === 0 ? <div className={style.LoaderCont}>
+        <h1 className={style.loader} ></h1>
         </div> : null} 
      {CurrentDog.map((dog) => (
         <Card

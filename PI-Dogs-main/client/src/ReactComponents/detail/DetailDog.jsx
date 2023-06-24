@@ -4,7 +4,10 @@ import imagenPata from './Pata.jpeg'
 
 function DetailDog ({detail}) {
     return(
-        <div className={style.container}>
+         <div>
+            { !detail?.image ?<div className={style.LoaderCont}>
+        <h1 className={style.loader} ></h1>
+        </div>  : <div className={style.container}>
             <div>
             <div className={style.contImage}>
         <img className={style.image} src={detail?.image} alt=' '  />
@@ -37,6 +40,7 @@ function DetailDog ({detail}) {
 
 
         </div>
+        </div>}
         
         </div>
     )
