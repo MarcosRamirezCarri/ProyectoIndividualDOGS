@@ -71,8 +71,8 @@ const handleOrderByWeight = (e) =>{
               <p>Filter your created dogs!</p>
               <select className={style.buttonDbDogSelect} onChange={handleOrigin}>
               <option select disabled>Select an origin</option>
-              <option value='all'>Todos</option>
-              <option value = 'creados'>Creados en db</option>
+              <option value='all'>All</option>
+              <option value = 'creados'>Created</option>
               </select>
             </div>: null }
           </div> : null}
