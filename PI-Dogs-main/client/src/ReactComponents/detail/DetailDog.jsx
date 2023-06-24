@@ -20,17 +20,17 @@ function DetailDog ({detail}) {
             
         <div className={style.conDeatils}>
            
-        <h2 className={style.DeatilsTemp}>Temperaments</h2>
+        <h2 className={style.DeatilsTemp}>Their temperaments are</h2>
         <p className={style.detailsWords}>{detail?.temperament}</p>
        
-        <h2 className={style.DeatilsTemp}>His Weights are</h2>
+        <h2 className={style.DeatilsTemp}>Their Weights are</h2>
         <p className={style.detailsWords}>{detail?.weight_min}Kg to {detail?.weight_max}Kg</p>
-        <h2 className={style.DeatilsTemp}>His heights are</h2>
+        <h2 className={style.DeatilsTemp}>Their heights are</h2>
         <p className={style.detailsWords}>{detail?.height_min} Cm to {detail?.height_max} Cm</p>
         </div>
         
         <div className={style.conDeatils}>
-            <h2 className={style.DeatilsTemp}>His life span is</h2>
+            <h2 className={style.DeatilsTemp}>Their life span is</h2>
             <p className={style.detailsWords}>{detail?.life_span_min} to {detail?.life_span_max} years</p>
             <div className={style.conImagenPata}>
                 <h4 className={style.DeatilsTemp}>Did you like this dog?</h4>

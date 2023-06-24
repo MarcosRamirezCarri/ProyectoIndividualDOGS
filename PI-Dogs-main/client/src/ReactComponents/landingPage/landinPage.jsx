@@ -18,7 +18,7 @@ const handleNavigate = () =>{
             <div className={style.contTitulo}>
             <h1 className={style.tituloWords}> <img className={style.image2} src={image2} alt=' ' /> Welcome to Henry dogs! </h1>
             </div>
-                        <h2 className={style.containerWords1}>Where you can find your nex life companion!</h2>
+                        <h2 className={style.containerWords1}>Where you can find your next life companion!</h2>
                 <button className={style.mybutton} onClick={handleNavigate}>Go to home <img className={style.image}src={image} alt=' ' /></button>
                 <div className={style.containerWords2}>
                  <a  href='https://github.com/MarcosRamirezCarri'>        <img className={style.image} src={gitHub} alt=' ' />
