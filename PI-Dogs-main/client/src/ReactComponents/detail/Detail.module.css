@@ -44,6 +44,7 @@
 .name{
     font-size: 32px;
     font-weight: 800;
+    font-family: 'Courier New';
     text-shadow: 2px 6px 9px #000000;
     color: rgb(0, 0, 0)
 }
@@ -62,7 +63,7 @@
 }
 
 .DeatilsTemp{
-    font-family: Arial;
+    font-family: Helvetica;
     font-weight: 700;
     text-shadow: 2px 6px 8px #000000;
     color: rgb(26, 25, 25);

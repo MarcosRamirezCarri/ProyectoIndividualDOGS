@@ -14,7 +14,6 @@ function Card ({name, image, id, weight_min, weight_max, temperament}) {
                 </Link>
                 <h3 className={style.containerName}>{name}</h3>
                 <p className={style.containerWords}>Weight: {weight_min} - {weight_max} kg</p>
-                <p className={style.containerWords}>id: {id}</p>
                 <p className={style.containerTemps}>Temperaments: {temperament}</p>
                 </div>
                 

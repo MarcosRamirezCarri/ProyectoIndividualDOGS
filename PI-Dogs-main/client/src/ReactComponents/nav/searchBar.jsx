@@ -33,15 +33,14 @@ const SearchBar = () => {
         </div>
   
         <div className={search.length === 0 ? null : style.contSearchBarResults}>
-          <div >
-            {search && dogs.slice(0, 10).map((d, i) => {
+          
+            {search && dogs.slice(0, 2).map((d, i) => {
               return (
                 <div >
                   <Link className={style.results} to={`${ROUTE.DETAIL}/${d.id}`} key={i}>{d.name}</Link>
                 </div>
               )
             })}
-          </div>
         </div> 
       </div>
      
