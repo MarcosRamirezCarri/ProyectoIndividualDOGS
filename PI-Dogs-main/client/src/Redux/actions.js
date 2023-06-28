@@ -1,6 +1,5 @@
 import axios from "axios";
 export const GET_DOGS = 'GET_DOGS';
-export const GET_DETAILS = 'GET_DETAILS';
 export const GET_TEMPERAMENT = 'GET_TEMPERAMENT';
 export const DOG_POST = 'DOG_POST';
 export const FILTER_CREATED = 'FILTER_CREATED';
@@ -12,10 +11,10 @@ export const DOG_WANTED = 'DOG_WANTED';
 
 
 export const getDogs = () => {
+  //Con esta funcion hago el llamado al back para traer los perros con try catch y asincrono
     return async function(dispatch) {
       try {
         let dogs = (await axios.get("http://localhost:3001/dogs")).data;
-        console.log(dogs);
         return dispatch({
         type: GET_DOGS,
         payload: dogs
@@ -26,39 +25,8 @@ export const getDogs = () => {
       }
     }
   }
-
-  export const getDetails = (detailId) =>{
-    return async function(dispatch){
-      try{
-        let details = (await axios(`http://localhost:3001/dogs/${detailId}`)).data
-        console.log('entro en la action')
-        const dogDetail = details.map(d =>{
-          return {
-            id: d.id,
-            image: d.image,
-            name: d.name,
-            weight_min: d.weight_min,
-            weight_max: d.weight_max,
-            height_min: d.height_min,
-            height_max: d.height_max,
-            life_span_min: d.life_span_min,
-            life_span_max: d.life_span_max,
-            temperament: d.temperament,
-          }
-        })
-        console.log(dogDetail)
-        return dispatch({
-          type: GET_DETAILS,
-          payload: dogDetail
-        })
-      }catch(error){
-        console.log(error);
-      }
-    }
-  
-  };
-
   export const getTemperament = () =>{
+    //Con esta funcion hago el llamado al back para traer los temperamentos con try catch y asincrono
     return async function(dispatch){
       try{
         let temperaments = (await axios("http://localhost:3001/temperaments")).data
@@ -75,6 +43,7 @@ export const getDogs = () => {
   };
 
   export const postDog = (payload) => {
+    //con esta action yo hago una peticion tipo post con los datos del payload
     return async function(dispatch) {
       try {
         await axios.post("http://localhost:3001/dogs", payload);
@@ -90,10 +59,10 @@ export const getDogs = () => {
   };
 
   export const dogSearch = (dogRaza) => {
+    //Con esta action voy buscando por el endpoint de search para buscar los perros por nombre
     return async function(dispatch) {
       try {
         const dogs =  ( await axios(`http://localhost:3001/search?name=${dogRaza}`)).data;
-
         return dispatch({
           type: DOG_WANTED,
           payload:dogs
@@ -131,6 +100,6 @@ export const getDogs = () => {
       type: ORDER_BY_WEIGHT,
       payload
     }
-  }
+  }; //Las ultimas simplemente son filtros los cuales se terminan de definir en el reducer
 
   ;

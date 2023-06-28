@@ -12,6 +12,8 @@ const {name, height_min, height_max, weight_min, weight_max, temperament, image,
           })
           await newDog.addTemperament(tempDb);
           console.log(newDog)
+          //Con esta funcion añado perros a la base de datos sin antes preguntar si los valores primordiales estan en el body.
+          //Luego para añadirles los temperamentos se toma el id de los temperamentos enviados y se busca dentro de la base de datos para añadirlos
         res.status(201).json({newDog});
     } catch (error) {
         res.status(500).json({message: error.message});

@@ -15,11 +15,12 @@ import Pagination from '../pagination/pagination';
   }, [dispatch])
   console.log(props.indexOfFirstDog, props.indexOfLastDog)
 
-  const CurrentDog = dogs.slice(props.indexOfFirstDog, props.indexOfLastDog)
+  const CurrentDog = dogs.slice(props.indexOfFirstDog, props.indexOfLastDog)//Aqui es donde determino cuales perros van aparecer
   console.log(CurrentDog)
     const paginate =(page) => {
       props.setCurrentPage(page)
-    }
+    } //Esta funcion de paginacion se encuentra en este componente porque por este lado yo organizo a cuales perros que van a parecer por pagina
+    //Y yo al pasar esto por props puedo llamar a la funcion desde el componente de paginado
 
     return (
     <div>

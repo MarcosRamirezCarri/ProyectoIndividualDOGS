@@ -15,7 +15,7 @@ async function formDogs (dogApi) {
         life_span_max: dog.life_span?.slice(4, -6).trim(),
         temperament: dog.temperament
       }
-    })
+    }) 
 
     const apiFormateo = await validandoDogsApi.map(d => {
       if(!d.weight_min || d.weight_min === "Na" || d.weight_min === "NaN" || d.weight_min === "aN") {
@@ -59,7 +59,7 @@ async function formDogs (dogApi) {
 
       return d
     })
-    return apiFormateo 
+    return apiFormateo //Con esta funcion lo que hago es armar en un objeto mas ordenado y validar los perros que vienen de la api por si les falta algun dato.
   }
 
 
@@ -95,7 +95,7 @@ const validandoDogsDb = dbFormateo.map(d => {
   return d
 })
 return validandoDogsDb
-};
+};//Con esta funcion lo que hago es armar en un objeto mas ordenado y validar los perros que se añaden a la base de datos por si les falta algun dato.
 
 
 

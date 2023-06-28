@@ -19,6 +19,7 @@ const getById = async(req, res) =>{
        const dogRaza = allDogs.filter(d => d.id == idRaza);
        console.log(dogRaza)
         res.status(200).json(dogRaza);
+        //En esta funcion se obtiene el id por params y esta lo que hace es filtrar a los perros traidos por su id
         }
         catch(error){
             res.status(500).json({message: error.message});

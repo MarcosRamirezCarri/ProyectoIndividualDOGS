@@ -10,6 +10,7 @@ const getDogs = async(req, res) =>{
         const validadoDogsApi = await formDogs(dogApi);
         const validadoDogsDb = await formDogsDb(dogDb);
        const allDogs = validadoDogsApi.concat(validadoDogsDb);
+       //Con esta funcion lo que hago es juntar a los perros que ese encuentren en la api y en la base de datos en un solo objeto, validandolos en el acto.
         res.status(200).json(allDogs);
         }
         catch(error){

@@ -17,7 +17,6 @@ useEffect(()=> {
 }, [dispatch]);
 
 const temperamentos = useSelector(state => state.temperaments);
-const dogs = useSelector(state => state.dogs)
 
 const [errors, setErrors] = useState({});
 
@@ -45,22 +44,27 @@ function handleChange(e){
     ...input,
     [e.target.name]: e.target.value
   }))
-};
+};//Con este handle change voy validando todos los valores ingresados y seteandolos en el estado local antes de mandarlo al back
 
 function handleSelect(e){
 
-  if(input.temperament.includes(e.target.value)) return
+  if(input.temperament.includes(e.target.value)) return //Con esto pregunta si el temperamento a añadir ya esta en el perro a crear
 
   setInput({
     ...input,
     temperament: [...input.temperament, e.target.value]
-  })
+  })//Seteo el temperamento del perro a crear
 
   const selectName = e.target.value;
   if(selectName === "default") return;
-  setInput({...input , temperament:[...input.temperament, selectName]})
+  setInput({...input , temperament:[...input.temperament, selectName]}) //Yo con este estado de selectName hago que los tempremanetos seleccionados se me muestren en el formulario 
   setSelectNameState([...selectNameState, temperamentos.find(e => e.id === parseInt(selectName))])
 };
+
+const handleDelete = (e) =>{
+  setInput({...input, temperament : input.temperament.filter(t => t !== e.target.value)})
+  setSelectNameState(selectNameState.filter(t => t.id !== parseInt(e.target.value)))
+};//Con esta funcion puedo eliminar los temperamentos seleccionados con filter
 
 const handleSubmit = (e) =>{
   e.preventDefault();
@@ -77,7 +81,7 @@ const handleSubmit = (e) =>{
         life_span_min: "",
         life_span_max: "",
         temperament: []
-      })
+      }) //Por ultimo con este Try Catch hago el llamado a la accion de post para subir el perro creado, sin antes verificar los datos obligatorios 
       setSelectNameState([])
     } catch (error) {
       console.log(error)
@@ -85,29 +89,10 @@ const handleSubmit = (e) =>{
   } 
 };
 
+//
+//https://img.freepik.com/fotos-premium/borzoi-blanco_870072-5360.jpg?w=826
 
-
-
-const handleDelete = (e) =>{
-  setInput({...input, temperament : input.temperament.filter(t => t !== e.target.value)})
-  setSelectNameState(selectNameState.filter(t => t.id !== parseInt(e.target.value)))
-};
-// const dogsDbName = (e) => {
-//   const val = e.target.value
-//   const dogName = val.map(d =>{
-//     return{
-//       name: d.name
-//     }
-//   });
-//   const errorName = dogs.map(d =>{
-//     if(d.name === dogName){
-//       window.alert('That name is already on use')
-//     }
-//   })
-
-  
-// }
-return(
+return(                    
   <div>
   <Nav/>
   <div className={style.Form_container}>

@@ -34,7 +34,7 @@ function Detail () {
         .catch((error)=>{
             window.alert('That dog doesn`t exists')
         });
-    }, [detailId]);
+    }, [detailId]); //Hice el detail con un estado local ya que esta pagina es una que se visitas una vez y luego no la vuelves a visitar
     console.log(detail)
     return(
         <div>

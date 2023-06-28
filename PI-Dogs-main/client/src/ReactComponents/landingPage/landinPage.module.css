@@ -28,6 +28,7 @@ margin-bottom: 100px;
     border-radius: 30px;
     justify-content: center;
    display: block;
+   margin-right: 250px;
 
 
 animation:bounce-top .9s linear both} @keyframes bounce-top{0%{transform:translateY(-45px);animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{transform:translateY(-24px);animation-timing-function:ease-in}65%{transform:translateY(-12px);animation-timing-function:ease-in}82%{transform:translateY(-6px);animation-timing-function:ease-in}93%{transform:translateY(-4px);animation-timing-function:ease-in}25%,55%,75%,87%{transform:translateY(0);animation-timing-function:ease-out}100%{transform:translateY(0);animation-timing-function:ease-out;opacity:1}}
@@ -77,8 +78,6 @@ animation:bounce-top .9s linear both} @keyframes bounce-top{0%{transform:transla
 	text-shadow: 1px 5px 5px #000000;
 	font-family:'Arial';
 	display: inline-block;
-	padding: 3px;
-	border-radius: 5px;
 	font-style: italic;
 	
 }

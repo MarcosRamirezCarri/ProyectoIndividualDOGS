@@ -27,26 +27,31 @@ function Nav(props) {
     const val = e.target.value
     props.setCurrentPage(1);
     dispatch(filterByTemperament(val));
-  }
+  } //Esta es la funcion con la cual ejecuto la accion de filtrar por temperamentos.
+  // Ademas seteo la paginacion en 1 (esto para volver a la primera pagina al filtrar)
+  
    const handleOrderByName = (e) =>{
     const val = e.target.value
     if(val === 'name_asc' || val === 'name_des'){
       dispatch(orderByName(val));
       props.setCurrentPage(1);
-    };
-  };
+    }; //Esta es la funcion con la cual ejecuto la accion de ordenar por nombre, los valores vienen en forma de string con el valor de la opcion
+  };// Ademas seteo la paginacion en 1 (esto para volver a la primera pagina al filtrar)
 const handleOrderByWeight = (e) =>{    
     const val = e.target.value
     if(val === 'weight_asc' || val === 'weight_des'){
       dispatch(orderByWeight(val));
       props.setCurrentPage(1);
-    };
+    }; //Esta es la funcion con la cual ejecuto la accion de ordenar por peso, los valores vienen en forma de string con el valor de la opcion
+    // Ademas seteo la paginacion en 1 (esto para volver a la primera pagina al filtrar)
    };
    const handleOrigin = (e) =>{
     const val = e.target.value
       dispatch(filterCreated(val));
       props.setCurrentPage(1)
     }
+    //Esta es la funcion con la cual ejecuto la accion de filtrar por origen, los valores vienen en forma de string con el valor de la opcion
+    // Ademas seteo la paginacion en 1 (esto para volver a la primera pagina al filtrar)
    
 
 
@@ -72,7 +77,7 @@ const handleOrderByWeight = (e) =>{
               <select className={style.buttonDbDogSelect} onChange={handleOrigin}>
               <option select disabled>Select an origin</option>
               <option value='all'>All</option>
-              <option value = 'creados'>Created</option>
+              <option value ='creados'>Created</option>
               </select>
             </div>: null }
           </div> : null}

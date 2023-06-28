@@ -9,7 +9,7 @@
     width: 36vh;
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    animation:blur-in 0.3s linear both}
+    animation:blur-in 0.2s linear both}
     @keyframes blur-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
 
 .container:hover{
